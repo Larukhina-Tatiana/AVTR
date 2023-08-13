@@ -1,0 +1,49 @@
+.hero {
+  position: relative;
+  padding-top: 630px;
+  padding-bottom: 50px;
+  text-align: center;
+
+  background: url(/images/hero@1x.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media screen and (min-device-pixel-ratio: 2),
+  screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (-o-mini-device-pixel-ratio: 2/1),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+    background: url(/images/hero@1x.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__title {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    @extend %CorporateA-700;
+    font-size: 4.5rem;
+    margin-bottom: 5px;
+  }
+
+  &::before {
+    position: absolute;
+    content: url(/images/icons/logo2.svg);
+    width: 50px;
+    height: 50px;
+    bottom: -25px;
+    left: 50%;
+  }
+
+  &__descr {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    @extend %RobotoCondensed-400;
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+
+  &__logo {
+    margin: 0 auto;
+  }
+}

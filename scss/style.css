@@ -1,5 +1,7 @@
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
-*, ::after, ::before {
+*,
+::after,
+::before {
   box-sizing: border-box;
 }
 
@@ -10,7 +12,7 @@ html {
 }
 
 html {
-  line-height: 1.15;
+  line-height: 1.2;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -32,11 +34,15 @@ abbr[title] {
           text-decoration: underline dotted;
 }
 
-b, strong {
+b,
+strong {
   font-weight: bolder;
 }
 
-code, kbd, pre, samp {
+code,
+kbd,
+pre,
+samp {
   font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
   font-size: 1em;
 }
@@ -45,7 +51,8 @@ small {
   font-size: 80%;
 }
 
-sub, sup {
+sub,
+sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
@@ -65,18 +72,26 @@ table {
   border-color: inherit;
 }
 
-button, input, optgroup, select, textarea {
+button,
+input,
+optgroup,
+select,
+textarea {
   font-family: inherit;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
 }
 
-button, select {
+button,
+select {
   text-transform: none;
 }
 
-[type=button], [type=reset], [type=submit], button {
+[type=button],
+[type=reset],
+[type=submit],
+button {
   -webkit-appearance: button;
 }
 
@@ -101,7 +116,8 @@ progress {
   vertical-align: baseline;
 }
 
-::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -129,7 +145,7 @@ summary {
   font-weight: 400;
   font-style: normal;
 }
-body {
+.hero__descr, body {
   font-family: "RobotoCondensed", cursive;
   font-weight: 400;
 }
@@ -140,6 +156,11 @@ body {
   font-weight: 700;
   font-style: normal;
 }
+.hero__title {
+  font-family: "CorporateA", cursive;
+  font-weight: 700;
+}
+
 html,
 body {
   box-sizing: border-box;
@@ -196,7 +217,7 @@ dd {
 body {
   background: linear-gradient(180deg, #070A1B 0%, #2A3170 100%);
   font-size: 1rem;
-  line-height: 120%;
+  line-height: 1.2;
   color: var(--white);
   overflow-x: hidden;
   min-width: 100vw;
@@ -301,4 +322,44 @@ button,
     width: calc(16px + 10 * (100vw - 300px) / 900);
     height: calc(16px + 10 * (100vw - 300px) / 900);
   }
+}
+
+.hero {
+  position: relative;
+  padding-top: 630px;
+  padding-bottom: 50px;
+  text-align: center;
+  background: url(/images/hero@1x.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (-o-mini-device-pixel-ratio: 2/1), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .hero {
+    background: url(/images/hero@1x.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+.hero__title {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 4.5rem;
+  margin-bottom: 5px;
+}
+.hero::before {
+  position: absolute;
+  content: url(/images/icons/logo2.svg);
+  width: 50px;
+  height: 50px;
+  bottom: -25px;
+  left: 50%;
+}
+.hero__descr {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+.hero__logo {
+  margin: 0 auto;
 }/*# sourceMappingURL=style.css.map */
