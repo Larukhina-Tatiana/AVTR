@@ -1,0 +1,21 @@
+.header {
+
+  &__nav {
+    padding: 32px 0 35px;
+
+    @media screen and (width < 1200px) {
+      padding-top: calc(10px + (32 - 10) * ((100vw - 300px)/ 900));
+      padding-bottom: calc(13px + (35 - 13) * ((100vw - 300px)/ 900));
+    }
+
+  }
+
+  &__logo {
+    margin-left: 427px;
+    margin-right: 285px;
+    @media screen and (width < 1200px) {
+      margin-left: calc(40px + (427 - 40) * ((100vw - 300px)/ 900));
+      margin-right: calc(20px + (285 - 20) * ((100vw - 300px)/ 900));
+    }
+  }
+}

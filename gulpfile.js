@@ -24,15 +24,15 @@ const ttf2woff2 = require("gulp-ttf2woff2");
 const include = require("gulp-include");
 
 function fonts() {
-  return src("app/fonts/src/*.*")
+  return src("fonts/src/*.ttf")
     .pipe(
       fonter({
         formats: ["woff", "ttf"],
       })
     )
-    .pipe(src("app/fonts/*.ttf"))
+    .pipe(src("fonts/src/*.ttf"))
     .pipe(ttf2woff2())
-    .pipe(dest("app/fonts"));
+    .pipe(dest("fonts"));
 }
 
 // function includeh() {
@@ -46,17 +46,17 @@ function fonts() {
 // }
 
 
-function styles() {
-  // return src("app/scss/style.scss")
-  return src("app/scss/style.scss")
-    .pipe(concat("style.min.css"))
-    .pipe(scss({ outputStyle: "compressed" }))
-    .pipe(dest("app/css"))
-    .pipe(autoprefixer({
-      overrideBrowsersList: ["last 10 version"],
-      grid: true
-  }));
-}
+// function styles() {
+//   // return src("app/scss/style.scss")
+//   return src("app/scss/style.scss")
+//     .pipe(concat("style.min.css"))
+//     .pipe(scss({ outputStyle: "compressed" }))
+//     .pipe(dest("app/css"))
+//     .pipe(autoprefixer({
+//       overrideBrowsersList: ["last 10 version"],
+//       grid: true
+//   }));
+// }
 
 function scripts() {
   return src([
@@ -75,25 +75,25 @@ function scripts() {
 function images() {
   // return src(["app/images/**/*.*", "!app/images/**/*.svg"])
   return (
-    src(["app/images/src/*.*", "!app/images/src/*.svg"])
+    src(["images/src/*.*", "!images/src/*.svg"])
       // .pipe(newer("app/images"))
       // .pipe(avif({ quality: 50 }))
 
       // .pipe(src("app/images/**/*.*"))
-      .pipe(src("app/images/src/*.*"))
-      .pipe(newer("app/images"))
+      .pipe(src("images/src/*.*"))
+      .pipe(newer("images"))
       .pipe(webp())
 
-      .pipe(src("app/images/src/*.*"))
-      .pipe(newer("app/images"))
+      .pipe(src("images/src/*.*"))
+      .pipe(newer("images"))
       .pipe(imagemin())
 
-      .pipe(dest("app/images"))
+      .pipe(dest("images"))
   );
 }
 
 function sprite() {
-  return src("app/images/*.svg")
+  return src("images/icons/*.svg")
     .pipe(
       svgSprite({
         mode: {
@@ -104,7 +104,7 @@ function sprite() {
         },
       })
     )
-    .pipe(dest("app/images"));
+    .pipe(dest("images"));
 }
 
 // функция удаления папок
@@ -140,7 +140,7 @@ function watching() {
 
 exports.fonts = fonts;
 // exports.includeh = includeh;
-exports.styles = styles;
+// exports.styles = styles;
 exports.scripts = scripts;
 exports.images = images;
 exports.sprite = sprite;
@@ -149,4 +149,5 @@ exports.watching = watching;
 
 exports.build = series(cleanDist, building);
 
-exports.default = parallel(styles, images, scripts, watching);
+// exports.default = parallel(styles, images, scripts, watching);
+exports.default = parallel(images, scripts, watching);

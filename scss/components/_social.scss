@@ -1,0 +1,20 @@
+.social {
+  display: flex;
+  align-items: center;
+  gap: 44px;
+
+  @media screen and (width < 1200px) {
+    gap: calc(10px + (44 - 10) * ((100vw - 300px)/ 900));
+  }
+
+  & svg {
+    width: 26px;
+    height: 26px;
+
+    @media screen and (width < 1200px) {
+      width: calc(16px + (26 - 16) * ((100vw - 300px)/ 900));
+      height: calc(16px + (26 - 16) * ((100vw - 300px)/ 900));
+    }
+
+  }
+}

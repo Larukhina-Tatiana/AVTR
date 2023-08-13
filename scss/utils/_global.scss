@@ -7,7 +7,7 @@ body {
 *,
 *::after,
 *::before {
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
 
 
@@ -54,19 +54,19 @@ dd {
 }
 
 body {
-    background: var(--peach);
-    @extend %Comfortaa-400;
-    font-size: .625rem;
-    line-height: calc(11/10);
-    color: var(--black);
+    background: linear-gradient(180deg, #070A1B 0%, #2A3170 100%);
+    @extend %RobotoCondensed-400;
+    font-size: 1rem;
+    line-height: 120%;
+    color: var(--white);
     overflow-x: hidden;
     min-width: 100vw;
 
 
-    @media screen and (width > 999px) {
-        font-size: .875rem;
-        line-height: calc(16/14);
-    }
+    // @media screen and (width > 999px) {
+    //     font-size: .875rem;
+    //     line-height: calc(16/14);
+    // }
 
 
 
