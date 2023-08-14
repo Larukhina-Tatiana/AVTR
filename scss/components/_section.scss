@@ -1,0 +1,6 @@
+.section {
+  padding-bottom: 150px;
+  @media screen and (width < 1200px) {
+    padding-bottom: calc(50px + (150 - 50) * ((100vw - 300px)/ 900));
+  }
+}

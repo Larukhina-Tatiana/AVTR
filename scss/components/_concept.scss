@@ -1,0 +1,19 @@
+.concept {
+  padding-top: 150px;
+  // background: linear-gradient(180deg, #070A1B 0%, #2A3170 100%);
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 auto;
+    max-width: 900px;
+
+    & p {
+      margin-bottom: 25px;
+    }
+  }
+
+  @media screen and (width < 1200px) {
+    padding-top: calc(50px + (150 - 50) * ((100vw - 300px)/ 900));
+  }
+}

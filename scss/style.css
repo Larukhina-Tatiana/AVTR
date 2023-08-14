@@ -145,7 +145,7 @@ summary {
   font-weight: 400;
   font-style: normal;
 }
-.hero__descr, body {
+body {
   font-family: "RobotoCondensed", cursive;
   font-weight: 400;
 }
@@ -156,7 +156,7 @@ summary {
   font-weight: 700;
   font-style: normal;
 }
-.hero__title {
+.premier__link, .title-h2, .hero__title {
   font-family: "CorporateA", cursive;
   font-weight: 700;
 }
@@ -215,7 +215,6 @@ dd {
 }
 
 body {
-  background: linear-gradient(180deg, #070A1B 0%, #2A3170 100%);
   font-size: 1rem;
   line-height: 1.2;
   color: var(--white);
@@ -275,6 +274,20 @@ button,
   max-width: 1220px;
   margin: 0 auto;
   padding: 0 10px;
+  outline: 1px solid brown;
+}
+
+.wrapp {
+  background: linear-gradient(180deg, #070A1B 0%, #2A3170 100%);
+}
+
+.section {
+  padding-bottom: 150px;
+}
+@media screen and (width < 1200px) {
+  .section {
+    padding-bottom: calc(50px + 100 * (100vw - 300px) / 900);
+  }
 }
 
 .header__nav {
@@ -374,4 +387,46 @@ button,
   .hero__descr {
     font-size: 1rem;
   }
+}
+
+.title-h2 {
+  color: var(--accent);
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.concept {
+  padding-top: 150px;
+}
+.concept__inner {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 0 auto;
+  max-width: 900px;
+}
+.concept__inner p {
+  margin-bottom: 25px;
+}
+@media screen and (width < 1200px) {
+  .concept {
+    padding-top: calc(50px + 100 * (100vw - 300px) / 900);
+  }
+}
+
+.premier__inner {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+.premier__content img, .premier__content p:not(:last-child) {
+  margin-bottom: 25px;
+}
+.premier__link {
+  padding: 14px 5px;
+  font-size: 1.125rem;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  background: rgba(196, 196, 196, 0);
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

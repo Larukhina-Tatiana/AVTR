@@ -1,0 +1,31 @@
+.premier {
+
+
+  &__inner {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+  }
+
+
+  &__content img,
+  &__content p:not(:last-child) {
+    margin-bottom: 25px;
+  }
+
+  // &__content-img {
+  //   max-width: 569px;
+  //   max-height: 664px;
+  // }
+
+  &__link {
+    padding: 14px 5px;
+    @extend %CorporateA-700;
+    font-size: 1.125rem;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    background: rgba(196, 196, 196, 0.00);
+    text-align: center;
+  }
+
+}
