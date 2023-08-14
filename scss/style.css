@@ -434,9 +434,27 @@ button,
   border: 1px solid var(--accent);
   background: rgba(196, 196, 196, 0);
   text-align: center;
+  text-transform: uppercase;
+  transition-duration: 550ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.premier__link:hover {
+  color: var(--shakespeare);
+  border: 1px solid var(--shakespeare);
 }
 @media screen and (width < 768px) {
   .premier__inner {
     flex-direction: column;
   }
+}
+
+.video img {
+  margin-bottom: 25px;
+}
+.video__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

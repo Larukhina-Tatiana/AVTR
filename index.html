@@ -141,6 +141,24 @@
         </div>
   
       </section>
+      <div class="video section container">
+        <picture>
+          <source srcset="
+                  ./images/video@1x.webp 1200w,
+                  ./images/video@2x.webp 2400w
+                " type="image/webp" media="(min-width: 1200px)" sizes="(min-width: 1200px) 1200px">
+          <img srcset="
+            ./images/video@1x.png 1200w,
+            ./images/video@2x.png 2400w
+                " src="./images/video@1x.jpg" alt="images" sizes="(min-width: 1200px) 1200px">
+        </picture>
+        <button class="video__button premier__link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="19" height="23" viewBox="0 0 19 23" fill="none">
+            <path d="M19 11.5L0.25 22.3253L0.25 0.674683L19 11.5Z" fill="currentColor"/>
+          </svg>
+          PLAY VIDEO
+        </button>
+      </div>
   
   
     </main>

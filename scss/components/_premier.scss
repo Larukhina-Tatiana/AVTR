@@ -21,12 +21,20 @@
     border: 1px solid var(--accent);
     background: rgba(196, 196, 196, 0.00);
     text-align: center;
+    text-transform: uppercase;
+    @include transition ($transition-property: (color, border));
+
+    &:hover {
+      color: var(--shakespeare);
+      border: 1px solid var(--shakespeare);
+    }
   }
 
+
   @media screen and (width < 768px) {
-     &__inner {
+    &__inner {
       flex-direction: column;
-     }
+    }
   }
 
 }

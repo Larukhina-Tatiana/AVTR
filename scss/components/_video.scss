@@ -1,0 +1,14 @@
+.video {
+
+  & img  {
+    margin-bottom: 25px;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    width: 100%;
+  }
+}
