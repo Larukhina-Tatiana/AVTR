@@ -1,7 +1,7 @@
 .hero {
-  position: relative;
   padding-top: 630px;
   padding-bottom: 50px;
+  position: relative;
   text-align: center;
 
   background: url(/images/hero@1x.png);
@@ -34,16 +34,30 @@
     height: 50px;
     bottom: -25px;
     left: 50%;
+    transform: translateX(-50%);
   }
 
   &__descr {
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     @extend %RobotoCondensed-400;
-    font-size: 24px;
+    font-size: 1.5rem;
     margin-bottom: 24px;
   }
 
   &__logo {
     margin: 0 auto;
+  }
+
+  @media screen and (width < 1200px) {
+    padding-top: calc(330px + (630 - 330) * ((100vw - 300px)/ 900));
+    padding-bottom: calc(10px + (50 - 10) * ((100vw - 300px)/ 900));
+
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__descr {
+      font-size: 1rem;
+    }
   }
 }

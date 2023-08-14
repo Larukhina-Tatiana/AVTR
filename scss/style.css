@@ -275,7 +275,6 @@ button,
   max-width: 1220px;
   margin: 0 auto;
   padding: 0 10px;
-  outline: 1px solid brown;
 }
 
 .header__nav {
@@ -325,9 +324,9 @@ button,
 }
 
 .hero {
-  position: relative;
   padding-top: 630px;
   padding-bottom: 50px;
+  position: relative;
   text-align: center;
   background: url(/images/hero@1x.png);
   background-size: cover;
@@ -354,12 +353,25 @@ button,
   height: 50px;
   bottom: -25px;
   left: 50%;
+  transform: translateX(-50%);
 }
 .hero__descr {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  font-size: 24px;
+  font-size: 1.5rem;
   margin-bottom: 24px;
 }
 .hero__logo {
   margin: 0 auto;
+}
+@media screen and (width < 1200px) {
+  .hero {
+    padding-top: calc(330px + 300 * (100vw - 300px) / 900);
+    padding-bottom: calc(10px + 40 * (100vw - 300px) / 900);
+  }
+  .hero__title {
+    font-size: 2rem;
+  }
+  .hero__descr {
+    font-size: 1rem;
+  }
 }/*# sourceMappingURL=style.css.map */
