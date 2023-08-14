@@ -279,7 +279,6 @@ button,
   max-width: 1220px;
   margin: 0 auto;
   padding: 0 10px;
-  outline: 1px solid brown;
 }
 
 .wrapp {
@@ -457,4 +456,53 @@ button,
   justify-content: center;
   gap: 9px;
   width: 100%;
+}
+
+.desing__inner {
+  display: flex;
+  gap: 44px;
+}
+.desing__content {
+  max-width: 255px;
+  width: 100%;
+}
+.desing__content p:not(:last-child) {
+  margin-bottom: 25px;
+}
+.desing__images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 94px;
+}
+.desing__images p {
+  width: 255px;
+}
+.desing__images-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.desing__images-inner img {
+  max-width: 330px;
+  width: 100%;
+}
+@media screen and (width < 1000px) {
+  .desing__inner {
+    flex-direction: column;
+  }
+  .desing__content {
+    max-width: 100%;
+  }
+  .desing__images {
+    gap: 25px;
+  }
+  .desing__images-inner {
+    flex-direction: column;
+  }
+  .desing__images-inner p {
+    width: 100%;
+    margin-bottom: 25px;
+  }
 }/*# sourceMappingURL=style.css.map */
