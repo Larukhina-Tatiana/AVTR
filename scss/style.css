@@ -328,7 +328,7 @@ button,
   padding-bottom: 50px;
   position: relative;
   text-align: center;
-  background: url(/images/hero@1x.png);
+  background: url(../images/hero@1x.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
