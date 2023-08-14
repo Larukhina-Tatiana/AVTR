@@ -221,6 +221,11 @@ body {
   overflow-x: hidden;
   min-width: 100vw;
 }
+@media screen and (width < 1200px) {
+  body {
+    font-size: calc(0.85rem + 0.15 * (100vw - 300px) / 900);
+  }
+}
 
 button {
   padding: 0;
@@ -429,4 +434,9 @@ button,
   border: 1px solid var(--accent);
   background: rgba(196, 196, 196, 0);
   text-align: center;
+}
+@media screen and (width < 768px) {
+  .premier__inner {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=style.css.map */
