@@ -1,0 +1,40 @@
+.footer {
+  background: var(--unnamed, #070A1B);
+
+
+
+  &__nav {
+    padding: 130px 0;
+    justify-content: space-between;
+  }
+
+
+  &__link {
+    color: var(--white);
+    @extend %RobotoCondensed-400;
+    font-size: 1rem;
+    font-style: normal;
+  }
+
+  @media screen and (width < 1200px) {
+    &__nav {
+      padding-top: calc(20px + (130 - 20) * ((100vw - 300px)/ 900));
+      padding-bottom: calc(20px + (130 - 20) * ((100vw - 300px)/ 900));
+    }
+
+    &__link {
+      font-size: calc(.75rem + (1 - .75) * ((100vw - 300px)/ 900));
+    }
+
+    &__logo {
+      width: calc(150px + (285 - 150) * ((100vw - 300px)/ 900));
+    }
+  }
+
+  @media screen and (width < 768px) {
+    &__nav {
+      flex-direction: column;
+      gap:  calc(15px + (30 - 15) * ((100vw - 300px)/ 900));
+    }
+  }
+}

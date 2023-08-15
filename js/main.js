@@ -1,9 +1,9 @@
 $('.design__slider').slick({
-  dots: true,
+  dots: false,
   infinite: false,
   arrows: true,
   speed: 300,
-  slidesToShow: 4,
+  slidesToShow: 3,
   slidesToScroll: 4,
   responsive: [
     {

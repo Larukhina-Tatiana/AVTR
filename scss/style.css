@@ -145,7 +145,7 @@ summary {
   font-weight: 400;
   font-style: normal;
 }
-body {
+.footer__link, body {
   font-family: "RobotoCondensed", cursive;
   font-weight: 400;
 }
@@ -223,7 +223,7 @@ body {
 }
 @media screen and (width < 1200px) {
   body {
-    font-size: calc(0.85rem + 0.15 * (100vw - 300px) / 900);
+    font-size: calc(0.75rem + 0.25 * (100vw - 300px) / 900);
   }
 }
 
@@ -329,6 +329,26 @@ button,
     gap: calc(10px + 34 * (100vw - 300px) / 900);
   }
 }
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  transition-duration: 550ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (width < 1200px) {
+  .social__link {
+    width: calc(30px + 10 * (100vw - 300px) / 900);
+    height: calc(30px + 10 * (100vw - 300px) / 900);
+  }
+}
+.social__link:hover {
+  background-color: var(--east-side);
+}
 .social svg {
   width: 26px;
   height: 26px;
@@ -352,7 +372,7 @@ button,
 }
 @media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (-o-mini-device-pixel-ratio: 2/1), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .hero {
-    background: url(../images/hero@1x.png);
+    background: url(../images/hero@2x.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -504,5 +524,69 @@ button,
   .desing__images-inner p {
     width: 100%;
     margin-bottom: 25px;
+  }
+}
+
+.text__inner {
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+}
+.text__content {
+  width: 255px;
+}
+.text__content p:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.images-bg {
+  background: url(../images/footer@1x.png);
+  padding-top: 900px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (-o-mini-device-pixel-ratio: 2/1), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .images-bg {
+    background: url(../images/footer@2x.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+@media screen and (width < 1200px) {
+  .images-bg {
+    padding-top: calc(150px + 750 * (100vw - 300px) / 900);
+  }
+}
+
+.footer {
+  background: var(--unnamed, #070A1B);
+}
+.footer__nav {
+  padding: 130px 0;
+  justify-content: space-between;
+}
+.footer__link {
+  color: var(--white);
+  font-size: 1rem;
+  font-style: normal;
+}
+@media screen and (width < 1200px) {
+  .footer__nav {
+    padding-top: calc(20px + 110 * (100vw - 300px) / 900);
+    padding-bottom: calc(20px + 110 * (100vw - 300px) / 900);
+  }
+  .footer__link {
+    font-size: calc(0.75rem + 0.25 * (100vw - 300px) / 900);
+  }
+  .footer__logo {
+    width: calc(150px + 135 * (100vw - 300px) / 900);
+  }
+}
+@media screen and (width < 768px) {
+  .footer__nav {
+    flex-direction: column;
+    gap: calc(15px + 15 * (100vw - 300px) / 900);
   }
 }/*# sourceMappingURL=style.css.map */

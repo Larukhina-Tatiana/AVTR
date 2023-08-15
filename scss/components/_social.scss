@@ -7,14 +7,34 @@
     gap: calc(10px + (44 - 10) * ((100vw - 300px)/ 900));
   }
 
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    @include transition ($transition-property: background-color);
+
+    @media screen and (width < 1200px) {
+      width: calc(30px + (40 - 30) * ((100vw - 300px)/ 900));
+      height: calc(30px + (40 - 30) * ((100vw - 300px)/ 900));
+    }
+
+    &:hover {
+      background-color: var(--east-side);
+    }
+  }
+
+
   & svg {
     width: 26px;
     height: 26px;
-
     @media screen and (width < 1200px) {
       width: calc(16px + (26 - 16) * ((100vw - 300px)/ 900));
       height: calc(16px + (26 - 16) * ((100vw - 300px)/ 900));
     }
-
   }
 }

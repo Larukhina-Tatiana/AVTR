@@ -63,7 +63,7 @@ body {
     min-width: 100vw;
 
     @media screen and (width < 1200px) {
-        font-size: calc(.85rem + (1 - .85) * ((100vw - 300px)/ 900));
+        font-size: calc(.75rem + (1 - .75) * ((100vw - 300px)/ 900));
     }
 
 
