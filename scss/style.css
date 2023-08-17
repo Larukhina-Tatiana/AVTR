@@ -481,13 +481,14 @@ button,
 .desing__inner {
   display: flex;
   gap: 44px;
+  margin-bottom: 100px;
 }
 .desing__content {
   max-width: 255px;
   width: 100%;
 }
 .desing__content p:not(:last-child) {
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 .desing__images {
   display: flex;
@@ -501,12 +502,43 @@ button,
 .desing__images-inner {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   width: 100%;
 }
 .desing__images-inner img {
   max-width: 330px;
   width: 100%;
+}
+.desing__slider {
+  padding-bottom: 25px;
+  position: relative;
+}
+.desing__slider-item {
+  margin: 0 30px;
+}
+.desing__text {
+  padding-top: 150px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 150px;
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+}
+.desing__text-content {
+  width: 255px;
+}
+.desing__text-content p:not(:last-child) {
+  margin-bottom: 15px;
+}
+@media screen and (width < 1200px) {
+  .desing__inner {
+    margin-bottom: calc(30px + -20 * (100vw - 300px) / 900);
+  }
+  .desing__text {
+    padding-top: calc(50px + 100 * (100vw - 300px) / 900);
+    padding-bottom: calc(50px + 100 * (100vw - 300px) / 900);
+  }
 }
 @media screen and (width < 1000px) {
   .desing__inner {
@@ -520,6 +552,7 @@ button,
   }
   .desing__images-inner {
     flex-direction: column;
+    align-items: center;
   }
   .desing__images-inner p {
     width: 100%;
@@ -527,37 +560,27 @@ button,
   }
 }
 
-.text__inner {
-  display: flex;
-  gap: 60px;
-  justify-content: center;
-}
-.text__content {
-  width: 255px;
-}
-.text__content p:not(:last-child) {
-  margin-bottom: 25px;
+.slick-track {
+  margin-left: -15px;
 }
 
-.images-bg {
-  background: url(../images/footer@1x.png);
-  padding-top: 900px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.arrow {
+  color: var(--accent);
+  position: absolute;
+  cursor: pointer;
+  content: "";
+  bottom: 0;
+  transition-duration: 550ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (-o-mini-device-pixel-ratio: 2/1), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
-  .images-bg {
-    background: url(../images/footer@2x.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
+.arrow:hover {
+  fill: var(--shakespeare);
 }
-@media screen and (width < 1200px) {
-  .images-bg {
-    padding-top: calc(150px + 750 * (100vw - 300px) / 900);
-  }
+.arrow-next {
+  left: 52%;
+}
+.arrow-prev {
+  left: 42%;
 }
 
 .footer {
