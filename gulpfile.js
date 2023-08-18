@@ -58,10 +58,22 @@ function fonts() {
 //   }));
 // }
 
+function styles() {
+    // return src("app/scss/style.scss")
+    return src("scss/style.scss")
+      .pipe(concat("style.min.css"))
+      .pipe(scss({ outputStyle: "compressed" }))
+      .pipe(dest("css"))
+      .pipe(autoprefixer({
+        overrideBrowsersList: ["last 10 version"],
+        grid: true
+    }));
+  }
+
 function scripts() {
   return src([
-    "node_modules/swiper/swiper-bundle.js",
-    "app/js/main.js",
+    // "node_modules/swiper/swiper-bundle.js",
+    "js/main.js",
 
     // Для подключения многих (всех) файлов js? Обязательно исключать main.min.js
     // 'app/js/*.js',
@@ -69,7 +81,7 @@ function scripts() {
   ])
     .pipe(concat("main.min.js"))
     .pipe(uglify())
-    .pipe(dest("app/js"));
+    .pipe(dest("js"));
 }
 
 function images() {
@@ -140,7 +152,7 @@ function watching() {
 
 exports.fonts = fonts;
 // exports.includeh = includeh;
-// exports.styles = styles;
+exports.styles = styles;
 exports.scripts = scripts;
 exports.images = images;
 exports.sprite = sprite;
