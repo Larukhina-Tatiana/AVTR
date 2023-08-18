@@ -54,7 +54,6 @@ dd {
 }
 
 body {
-    // background: linear-gradient(180deg, #070A1B 0%, #2A3170 100%);
     @extend %RobotoCondensed-400;
     font-size: 1rem;
     line-height: 1.2;
@@ -63,31 +62,8 @@ body {
     min-width: 100vw;
 
     @media screen and (width < 1200px) {
-        font-size: calc(.75rem + (1 - .75) * ((100vw - 300px)/ 900));
+        font-size: calc(.875rem + (1 - .875) * ((100vw - 300px)/ 900));
     }
-
-
-    // @media screen and (width > 999px) {
-    //     font-size: .875rem;
-    //     line-height: calc(16/14);
-    // }
-
-
-
-    // }
-    // @media screen and (width < 769px) {
-    //     line-height: calc(15/10);
-    // }
-    // @media screen and (width > 1000px) {
-
-
-
-
-    // @media screen and (width > 480px) {
-    // font-size: .5rem;
-    // line-height: calc(12/8);
-    //     line-height: calc(11/10);
-    // }
 }
 
 button {
@@ -127,12 +103,6 @@ button,
 // .footer {
 //     flex: 0 0 auto;
 // }
-
-
-// .hr-line {
-//     border-bottom: 1px solid var(--black);
-// }
-
 
 .visually-hidden {
     position: absolute;
