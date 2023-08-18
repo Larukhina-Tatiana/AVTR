@@ -513,8 +513,10 @@ button,
   padding-bottom: 25px;
   position: relative;
 }
-.desing__slider-item {
-  margin: 0 30px;
+.desing__slider-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 .desing__text {
   padding-top: 150px;
@@ -533,7 +535,10 @@ button,
 }
 @media screen and (width < 1200px) {
   .desing__inner {
-    margin-bottom: calc(30px + -20 * (100vw - 300px) / 900);
+    margin-bottom: calc(30px + 70 * (100vw - 300px) / 900);
+  }
+  .desing__images {
+    row-gap: calc(5px + 89 * (100vw - 768px) / 423);
   }
   .desing__text {
     padding-top: calc(50px + 100 * (100vw - 300px) / 900);
@@ -559,28 +564,52 @@ button,
     margin-bottom: 25px;
   }
 }
-
-.slick-track {
-  margin-left: -15px;
+@media screen and (width < 768px) {
+  .desing__text {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .desing__text-content {
+    width: 100%;
+  }
 }
 
-.arrow {
+.swiper {
+  position: relative;
+  padding-bottom: 25px;
+}
+
+.swiper-button {
+  width: 50px;
   color: var(--accent);
   position: absolute;
   cursor: pointer;
-  content: "";
-  bottom: 0;
-  transition-duration: 550ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  top: 97%;
+  z-index: 2;
 }
-.arrow:hover {
-  fill: var(--shakespeare);
+.swiper-button-prev {
+  content: url("../images/icons/arrow-prev.svg");
+  left: 43%;
 }
-.arrow-next {
-  left: 52%;
+.swiper-button-next {
+  content: url("../images/icons/arrow-next.svg");
+  left: 53%;
 }
-.arrow-prev {
-  left: 42%;
+@media screen and (width < 768px) {
+  .swiper-button-prev {
+    left: 42%;
+  }
+  .swiper-button-next {
+    left: 51%;
+  }
+}
+@media screen and (width < 678px) {
+  .swiper-button-prev {
+    left: 25%;
+  }
+  .swiper-button-next {
+    left: 69%;
+  }
 }
 
 .footer {
